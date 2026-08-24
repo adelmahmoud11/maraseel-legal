@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شروط الخدمة — مراسيل / Maraseel Terms of Service</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --border: #dddddd;
+    --accent: #1565c0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #f0f0f0;
+      --muted: #aaaaaa;
+      --border: #333333;
+      --accent: #64b5f6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    line-height: 1.8;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 32px; }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  .lang-toggle { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+  .lang-toggle button {
+    background: none; border: 1px solid var(--border); color: var(--fg);
+    padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem;
+  }
+  .lang-toggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  ol, ul { padding-inline-start: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="lang-toggle">
+    <button id="btn-lang-ar" aria-pressed="true" onclick="setLang('ar')">العربية</button>
+    <button id="btn-lang-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <h1 data-i18n="title">شروط الخدمة — مراسيل</h1>
+  <p class="meta"><span data-i18n="versionLabel">إصدار الشروط:</span> 1.0.0 (2026-08-22)</p>
+
+  <p data-i18n="intro">توضح هذه الصفحة الشروط التي تحكم استخدامك لتطبيق مراسيل (الرسائل النصية والوسائط، المكالمات الصوتية والفيديو، الحالات، والبث الصوتي المباشر، سواء عبر الإنترنت أو عبر الاتصال المباشر بالأجهزة القريبة Wi-Fi Direct). باستخدامك للتطبيق فإنك توافق على هذه الشروط.</p>
+
+  <h2 data-i18n="accountTitle">الحساب</h2>
+  <p data-i18n="accountBody">تُنشئ حسابك في مراسيل عبر تسجيل الدخول بحساب Google. أنت مسؤول عن الحفاظ على أمان جهازك وحسابك، وعن أي نشاط يحدث من خلاله. يجب أن تكون المعلومات التي تقدمها (مثل الاسم الظاهر) صحيحة وغير منتحلة لهوية شخص آخر.</p>
+
+  <h2 data-i18n="ageTitle">الأهلية العمرية</h2>
+  <p data-i18n="ageBody">يتطلب استخدام مراسيل امتلاك حساب Google، وبالتالي فإن الحد الأدنى لسن استخدامه هو نفس الحد الأدنى المطلوب لإنشاء حساب Google في بلدك.</p>
+
+  <h2 data-i18n="acceptableUseTitle">الاستخدام المقبول</h2>
+  <ul>
+    <li data-i18n="au1">عدم استخدام التطبيق لإرسال محتوى غير قانوني، أو مسيء، أو يهدد أو يتحرش بأشخاص آخرين.</li>
+    <li data-i18n="au2">عدم انتحال شخصية طرف آخر أو التضليل بشأن هويتك.</li>
+    <li data-i18n="au3">عدم محاولة التحايل على قيود التطبيق الأمنية، أو الوصول غير المصرح به لحسابات أو بيانات مستخدمين آخرين.</li>
+    <li data-i18n="au4">عدم استخدام ميزة الاتصال بالأجهزة القريبة (Wi-Fi Direct) للتشويش على أجهزة أخرى أو انتهاك خصوصية من حولك.</li>
+  </ul>
+  <p data-i18n="acceptableUseNote">قد نُعلّق أو نُنهي الوصول لأي حساب يخالف هذه الشروط.</p>
+
+  <h2 data-i18n="contentTitle">المحتوى الذي تشاركه</h2>
+  <p data-i18n="contentBody">أنت المالك والمسؤول الوحيد عن محتوى الرسائل والوسائط والحالات التي تنشرها أو ترسلها عبر مراسيل. لا يراجع مراسيل محتوى محادثاتك الخاصة، ولا يستخدمها لأي غرض غير تشغيل الميزة التي أرسلتها من أجلها (انظر سياسة الخصوصية لتفاصيل كيفية معالجة بياناتك).</p>
+
+  <h2 data-i18n="availabilityTitle">توفر الخدمة</h2>
+  <p data-i18n="availabilityBody">مراسيل يعتمد على خدمات خلفية (Supabase) وعلى شبكات الإنترنت/Wi-Fi، وقد تتأثر الميزات مؤقتًا بانقطاع هذه الخدمات أو الشبكات أو بأعمال صيانة. نبذل جهدًا معقولًا للحفاظ على استمرارية الخدمة لكن لا نضمن توفرها دون انقطاع.</p>
+
+  <h2 data-i18n="warrantyTitle">إخلاء المسؤولية والضمان</h2>
+  <p data-i18n="warrantyBody">يُقدَّم التطبيق "كما هو" دون أي ضمانات صريحة أو ضمنية بشأن ملاءمته لغرض معين أو خلوّه التام من الأخطاء. لا يتحمل مراسيل مسؤولية أي أضرار غير مباشرة تنشأ عن استخدام التطبيق أو تعذّر استخدامه، إلى الحد الذي يسمح به القانون المعمول به.</p>
+
+  <h2 data-i18n="terminationTitle">إنهاء الحساب</h2>
+  <p data-i18n="terminationBody">يمكنك حذف حسابك وبياناتك في أي وقت من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية. كما يمكننا نحن تعليق أو إنهاء حسابك في حال مخالفة هذه الشروط أو الاستخدام المسيء المؤكد للخدمة.</p>
+  <p><a href="./delete-account.html" data-i18n="deleteLink">اذهب إلى صفحة حذف الحساب</a> · <a href="./privacy-policy.html" data-i18n="privacyLink">اذهب إلى سياسة الخصوصية</a></p>
+
+  <h2 data-i18n="changesTitle">تعديلات على هذه الشروط</h2>
+  <p data-i18n="changesBody">قد نُحدّث هذه الشروط من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري، ويُعدّ استمرارك في استخدام التطبيق بعد التحديث موافقة على الشروط المحدَّثة.</p>
+
+  <h2 data-i18n="contactTitle">تواصل معنا</h2>
+  <p>
+    <span data-i18n="contactBody">لأي استفسار متعلق بهذه الشروط: </span>
+    <a href="mailto:REPLACE_WITH_SUPPORT_EMAIL">REPLACE_WITH_SUPPORT_EMAIL</a>
+  </p>
+</main>
+
+<script>
+  const i18n = {
+    ar: {
+      title: 'شروط الخدمة — مراسيل',
+      versionLabel: 'إصدار الشروط:',
+      intro: 'توضح هذه الصفحة الشروط التي تحكم استخدامك لتطبيق مراسيل (الرسائل النصية والوسائط، المكالمات الصوتية والفيديو، الحالات، والبث الصوتي المباشر، سواء عبر الإنترنت أو عبر الاتصال المباشر بالأجهزة القريبة Wi-Fi Direct). باستخدامك للتطبيق فإنك توافق على هذه الشروط.',
+      accountTitle: 'الحساب',
+      accountBody: 'تُنشئ حسابك في مراسيل عبر تسجيل الدخول بحساب Google. أنت مسؤول عن الحفاظ على أمان جهازك وحسابك، وعن أي نشاط يحدث من خلاله. يجب أن تكون المعلومات التي تقدمها (مثل الاسم الظاهر) صحيحة وغير منتحلة لهوية شخص آخر.',
+      ageTitle: 'الأهلية العمرية',
+      ageBody: 'يتطلب استخدام مراسيل امتلاك حساب Google، وبالتالي فإن الحد الأدنى لسن استخدامه هو نفس الحد الأدنى المطلوب لإنشاء حساب Google في بلدك.',
+      acceptableUseTitle: 'الاستخدام المقبول',
+      au1: 'عدم استخدام التطبيق لإرسال محتوى غير قانوني، أو مسيء، أو يهدد أو يتحرش بأشخاص آخرين.',
+      au2: 'عدم انتحال شخصية طرف آخر أو التضليل بشأن هويتك.',
+      au3: 'عدم محاولة التحايل على قيود التطبيق الأمنية، أو الوصول غير المصرح به لحسابات أو بيانات مستخدمين آخرين.',
+      au4: 'عدم استخدام ميزة الاتصال بالأجهزة القريبة (Wi-Fi Direct) للتشويش على أجهزة أخرى أو انتهاك خصوصية من حولك.',
+      acceptableUseNote: 'قد نُعلّق أو نُنهي الوصول لأي حساب يخالف هذه الشروط.',
+      contentTitle: 'المحتوى الذي تشاركه',
+      contentBody: 'أنت المالك والمسؤول الوحيد عن محتوى الرسائل والوسائط والحالات التي تنشرها أو ترسلها عبر مراسيل. لا يراجع مراسيل محتوى محادثاتك الخاصة، ولا يستخدمها لأي غرض غير تشغيل الميزة التي أرسلتها من أجلها (انظر سياسة الخصوصية لتفاصيل كيفية معالجة بياناتك).',
+      availabilityTitle: 'توفر الخدمة',
+      availabilityBody: 'مراسيل يعتمد على خدمات خلفية (Supabase) وعلى شبكات الإنترنت/Wi-Fi، وقد تتأثر الميزات مؤقتًا بانقطاع هذه الخدمات أو الشبكات أو بأعمال صيانة. نبذل جهدًا معقولًا للحفاظ على استمرارية الخدمة لكن لا نضمن توفرها دون انقطاع.',
+      warrantyTitle: 'إخلاء المسؤولية والضمان',
+      warrantyBody: 'يُقدَّم التطبيق "كما هو" دون أي ضمانات صريحة أو ضمنية بشأن ملاءمته لغرض معين أو خلوّه التام من الأخطاء. لا يتحمل مراسيل مسؤولية أي أضرار غير مباشرة تنشأ عن استخدام التطبيق أو تعذّر استخدامه، إلى الحد الذي يسمح به القانون المعمول به.',
+      terminationTitle: 'إنهاء الحساب',
+      terminationBody: 'يمكنك حذف حسابك وبياناتك في أي وقت من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية. كما يمكننا نحن تعليق أو إنهاء حسابك في حال مخالفة هذه الشروط أو الاستخدام المسيء المؤكد للخدمة.',
+      deleteLink: 'اذهب إلى صفحة حذف الحساب',
+      privacyLink: 'اذهب إلى سياسة الخصوصية',
+      changesTitle: 'تعديلات على هذه الشروط',
+      changesBody: 'قد نُحدّث هذه الشروط من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري، ويُعدّ استمرارك في استخدام التطبيق بعد التحديث موافقة على الشروط المحدَّثة.',
+      contactTitle: 'تواصل معنا',
+      contactBody: 'لأي استفسار متعلق بهذه الشروط: ',
+    },
+    en: {
+      title: 'Maraseel Terms of Service',
+      versionLabel: 'Terms version:',
+      intro: 'This page explains the terms that govern your use of the Maraseel app (text and media messages, voice/video calls, statuses, and live audio broadcasting, over the internet or direct nearby-device Wi-Fi Direct connectivity). By using the app you agree to these terms.',
+      accountTitle: 'Your account',
+      accountBody: 'Your Maraseel account is created by signing in with a Google account. You are responsible for keeping your device and account secure, and for any activity that happens through it. Information you provide (such as your display name) must be accurate and must not impersonate another person.',
+      ageTitle: 'Age eligibility',
+      ageBody: 'Using Maraseel requires a Google account, so the minimum age to use it is the same minimum age required to hold a Google account in your country.',
+      acceptableUseTitle: 'Acceptable use',
+      au1: 'Do not use the app to send illegal, abusive, threatening, or harassing content.',
+      au2: 'Do not impersonate another person or misrepresent your identity.',
+      au3: 'Do not attempt to circumvent the app\'s security controls, or gain unauthorized access to other users\' accounts or data.',
+      au4: 'Do not use the nearby-device (Wi-Fi Direct) connectivity feature to interfere with other devices or violate the privacy of people around you.',
+      acceptableUseNote: 'We may suspend or terminate access for any account that violates these terms.',
+      contentTitle: 'Content you share',
+      contentBody: 'You own, and are solely responsible for, the messages, media and statuses you post or send through Maraseel. Maraseel does not review the content of your private conversations, and does not use it for anything other than operating the feature you sent it through (see the Privacy Policy for how your data is processed).',
+      availabilityTitle: 'Service availability',
+      availabilityBody: 'Maraseel depends on backend services (Supabase) and on internet/Wi-Fi networks, so features may be temporarily affected by outages in those services or networks, or by maintenance. We make reasonable efforts to keep the service running but do not guarantee uninterrupted availability.',
+      warrantyTitle: 'Disclaimer of warranty',
+      warrantyBody: 'The app is provided "as is" without any express or implied warranty that it is fit for a particular purpose or entirely free of errors. To the extent permitted by applicable law, Maraseel is not liable for indirect damages arising from your use of, or inability to use, the app.',
+      terminationTitle: 'Account termination',
+      terminationBody: 'You can delete your account and data at any time from within the app (Settings → Delete account) or from the official account-deletion page. We may also suspend or terminate your account if these terms are violated or the service is confirmed to be misused.',
+      deleteLink: 'Go to the account deletion page',
+      privacyLink: 'Go to the Privacy Policy',
+      changesTitle: 'Changes to these terms',
+      changesBody: 'We may update these terms from time to time. The version number and date above will change whenever a material update is made, and continuing to use the app after an update means you accept the updated terms.',
+      contactTitle: 'Contact us',
+      contactBody: 'For any question about these terms: ',
+    },
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('btn-lang-ar').setAttribute('aria-pressed', String(lang === 'ar'));
+    document.getElementById('btn-lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+    });
+  }
+  setLang('ar');
+</script>
+</body>
+</html>

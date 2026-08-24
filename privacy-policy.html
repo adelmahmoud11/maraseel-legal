@@ -1,1 +1,193 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سياسة الخصوصية — مراسيل / Maraseel Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --border: #dddddd;
+    --accent: #1565c0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #f0f0f0;
+      --muted: #aaaaaa;
+      --border: #333333;
+      --accent: #64b5f6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    line-height: 1.8;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 32px; }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  .lang-toggle { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+  .lang-toggle button {
+    background: none; border: 1px solid var(--border); color: var(--fg);
+    padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem;
+  }
+  .lang-toggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.92rem; }
+  th, td { text-align: start; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="lang-toggle">
+    <button id="btn-lang-ar" aria-pressed="true" onclick="setLang('ar')">العربية</button>
+    <button id="btn-lang-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
 
+  <h1 data-i18n="title">سياسة الخصوصية — مراسيل</h1>
+  <p class="meta"><span data-i18n="versionLabel">إصدار السياسة:</span> 1.1.0 (2026-08-21)</p>
+
+  <p data-i18n="intro">مراسيل تطبيق مراسلة يتيح إرسال الرسائل النصية والصور والملفات والرسائل الصوتية، مكالمات صوتية وفيديو، حالات (قصص)، وبثًا صوتيًا مباشرًا، مع دعم اتصال مباشر بين الأجهزة القريبة (Wi-Fi Direct) بالإضافة إلى النقل عبر الإنترنت. توضح هذه الصفحة ما الذي نعالجه من بياناتك وكيف.</p>
+
+  <h2 data-i18n="collectTitle">البيانات التي نعالجها</h2>
+  <table>
+    <thead>
+      <tr>
+        <th data-i18n="colData">البيانات</th>
+        <th data-i18n="colWhere">أين تُخزَّن</th>
+      </tr>
+    </thead>
+    <tbody id="data-table-body"></tbody>
+  </table>
+  <p class="meta" data-i18n="tableNote">"الخادم" تعني مشروع Supabase الخاص بالتطبيق (قاعدة بيانات + تخزين ملفات محمي بصلاحيات على مستوى الصف/RLS). "الجهاز فقط" تعني بيانات لا تغادر جهازك أبدًا.</p>
+
+  <h2 data-i18n="useTitle">كيف نستخدم هذه البيانات</h2>
+  <p data-i18n="useBody">نستخدم هذه البيانات فقط لتقديم ميزات التطبيق نفسه: تسجيل الدخول والتحقق من الهوية، تسليم الرسائل والوسائط، تشغيل المكالمات والبث الصوتي، تفعيل ميزة الاتصال بالأجهزة القريبة، والحفاظ على أمان حسابك. لا يستخدم مراسيل بياناتك للإعلانات أو التتبع، ولا يحتوي على أي حزمة تحليلات (Analytics) أو إعلانات (Ads SDK).</p>
+
+  <h2 data-i18n="thirdPartyTitle">أطراف ثالثة</h2>
+  <ul>
+    <li data-i18n="tpGoogle">Google — لتسجيل الدخول عبر حساب Google فقط (لا نطلب صلاحيات إضافية غير الاسم والبريد والصورة الرمزية).</li>
+    <li data-i18n="tpSupabase">Supabase — مزوّد قاعدة البيانات والتخزين والدوال الخلفية (Edge Functions) التي تشغّل التطبيق.</li>
+  </ul>
+  <p data-i18n="tpNote">تخضع بياناتك لدى هذه الأطراف أيضًا لسياسات الخصوصية الخاصة بها.</p>
+
+  <h2 data-i18n="securityTitle">الأمان</h2>
+  <p data-i18n="securityBody">الوسائط الخاصة تُخزَّن في حاويات Supabase Storage محمية، ويجب أن تُقدَّم فقط عبر روابط موقّعة (Signed URLs) لمستخدمين مصرَّح لهم. قاعدة البيانات محمية بسياسات أمان على مستوى الصف (Row Level Security) تمنع أي مستخدم من قراءة بيانات مستخدم آخر لا يخصه.</p>
+
+  <h2 data-i18n="retentionTitle">الاحتفاظ بالبيانات وحذفها</h2>
+  <p data-i18n="retentionBody">يمكنك حذف حسابك وبياناتك بشكل دائم من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية المتاحة حتى دون تثبيت التطبيق. يؤدي الحذف إلى إزالة حساب المصادقة والرسائل والحالات وملف التعريف من خوادمنا. لا تُحذف تلقائيًا نسخ الرسائل/الملفات المخزَّنة محليًا على جهازك؛ لإزالتها احذف بيانات التطبيق أو أزل تثبيته.</p>
+  <p><a href="./delete-account.html" data-i18n="deleteLink">اذهب إلى صفحة حذف الحساب</a></p>
+
+  <h2 data-i18n="childrenTitle">الأطفال</h2>
+  <p data-i18n="childrenBody">مراسيل غير موجّه للأطفال دون السن القانوني المطلوب لإنشاء حساب Google في بلدك، ولا نجمع عن قصد بيانات من أطفال دون ذلك السن.</p>
+
+  <h2 data-i18n="changesTitle">تعديلات على هذه السياسة</h2>
+  <p data-i18n="changesBody">قد نُحدّث هذه السياسة من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري.</p>
+
+  <h2 data-i18n="contactTitle">تواصل معنا</h2>
+  <p>
+    <span data-i18n="contactBody">لأي استفسار متعلق بالخصوصية أو بياناتك: </span>
+    <a href="mailto:REPLACE_WITH_SUPPORT_EMAIL">REPLACE_WITH_SUPPORT_EMAIL</a>
+  </p>
+</main>
+
+<script>
+  const rows = [
+    { ar: ['معرّف الحساب وبريد وصورة Google', 'الخادم (بيانات المصادقة فقط)'], en: ['Account ID, Google email and avatar', 'Server (authentication data only)'] },
+    { ar: ['الاسم الظاهر ورقم الهاتف ونبذة الملف الشخصي', 'الخادم'], en: ['Display name, phone number and bio', 'Server'] },
+    { ar: ['الرسائل النصية والوسائط (صور/ملفات/رسائل صوتية)', 'الخادم + الجهاز (نسخة محلية للعرض دون اتصال)'], en: ['Text messages and media (images/files/voice notes)', 'Server + device (local copy for offline viewing)'] },
+    { ar: ['الحالات (القصص) وجمهورها ومشاهداتها', 'الخادم'], en: ['Statuses (stories), audience and views', 'Server'] },
+    { ar: ['إشارات المكالمات الصوتية والفيديو (Signaling) وسجل المكالمات', 'الخادم'], en: ['Voice/video call signaling and call history', 'Server'] },
+    { ar: ['إشارات البث الصوتي المباشر', 'الخادم'], en: ['Live audio broadcast signaling', 'Server'] },
+    { ar: ['جهات الاتصال داخل التطبيق (التي تضيفها يدويًا)', 'الجهاز فقط — لا تُرفع إلى الخادم'], en: ['In-app contacts you add manually', 'Device only — never uploaded to the server'] },
+    { ar: ['رمز حماية المحادثات (PIN) إن فعّلته', 'الجهاز فقط، مخزَّن بتشفير آمن (secure storage)'], en: ['Chat-lock PIN, if enabled', 'Device only, in encrypted secure storage'] },
+    { ar: ['رمز إشعارات الدفع (Push token)', 'الخادم — لإرسال الإشعارات فقط'], en: ['Push notification token', 'Server — used only to deliver notifications'] },
+    { ar: ['بيانات الاتصال المباشر بالأجهزة القريبة (Wi-Fi Direct)', 'الجهاز فقط، ولا تُرسَل إلا لجهات اتصال موثوقة لديك'], en: ['Nearby-device direct connection data (Wi-Fi Direct)', 'Device only, and only routed to your trusted contacts'] },
+    { ar: ['بيانات تحليلات أو إعلانات', 'لا تُجمَع إطلاقًا — لا توجد حزمة Analytics أو Ads في التطبيق'], en: ['Analytics or advertising data', 'Never collected — no Analytics/Ads SDK is present'] },
+    { ar: ['جهات اتصال الهاتف (دفتر العناوين)', 'لا تُقرأ إطلاقًا — لا يطلب التطبيق صلاحية الوصول لجهات الاتصال'], en: ['Phone contact book', 'Never read — the app does not request contacts permission'] },
+  ];
+
+  const tbody = document.getElementById('data-table-body');
+  function renderTable(lang) {
+    tbody.innerHTML = rows.map((r) => `<tr><td>${r[lang][0]}</td><td>${r[lang][1]}</td></tr>`).join('');
+  }
+
+  const i18n = {
+    ar: {
+      title: 'سياسة الخصوصية — مراسيل',
+      versionLabel: 'إصدار السياسة:',
+      intro: 'مراسيل تطبيق مراسلة يتيح إرسال الرسائل النصية والصور والملفات والرسائل الصوتية، مكالمات صوتية وفيديو، حالات (قصص)، وبثًا صوتيًا مباشرًا، مع دعم اتصال مباشر بين الأجهزة القريبة (Wi-Fi Direct) بالإضافة إلى النقل عبر الإنترنت. توضح هذه الصفحة ما الذي نعالجه من بياناتك وكيف.',
+      collectTitle: 'البيانات التي نعالجها',
+      colData: 'البيانات', colWhere: 'أين تُخزَّن',
+      tableNote: '"الخادم" تعني مشروع Supabase الخاص بالتطبيق (قاعدة بيانات + تخزين ملفات محمي بصلاحيات على مستوى الصف/RLS). "الجهاز فقط" تعني بيانات لا تغادر جهازك أبدًا.',
+      useTitle: 'كيف نستخدم هذه البيانات',
+      useBody: 'نستخدم هذه البيانات فقط لتقديم ميزات التطبيق نفسه: تسجيل الدخول والتحقق من الهوية، تسليم الرسائل والوسائط، تشغيل المكالمات والبث الصوتي، تفعيل ميزة الاتصال بالأجهزة القريبة، والحفاظ على أمان حسابك. لا يستخدم مراسيل بياناتك للإعلانات أو التتبع، ولا يحتوي على أي حزمة تحليلات (Analytics) أو إعلانات (Ads SDK).',
+      thirdPartyTitle: 'أطراف ثالثة',
+      tpGoogle: 'Google — لتسجيل الدخول عبر حساب Google فقط (لا نطلب صلاحيات إضافية غير الاسم والبريد والصورة الرمزية).',
+      tpSupabase: 'Supabase — مزوّد قاعدة البيانات والتخزين والدوال الخلفية (Edge Functions) التي تشغّل التطبيق.',
+      tpNote: 'تخضع بياناتك لدى هذه الأطراف أيضًا لسياسات الخصوصية الخاصة بها.',
+      securityTitle: 'الأمان',
+      securityBody: 'الوسائط الخاصة تُخزَّن في حاويات Supabase Storage محمية، ويجب أن تُقدَّم فقط عبر روابط موقّعة (Signed URLs) لمستخدمين مصرَّح لهم. قاعدة البيانات محمية بسياسات أمان على مستوى الصف (Row Level Security) تمنع أي مستخدم من قراءة بيانات مستخدم آخر لا يخصه.',
+      retentionTitle: 'الاحتفاظ بالبيانات وحذفها',
+      retentionBody: 'يمكنك حذف حسابك وبياناتك بشكل دائم من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية المتاحة حتى دون تثبيت التطبيق. يؤدي الحذف إلى إزالة حساب المصادقة والرسائل والحالات وملف التعريف من خوادمنا. لا تُحذف تلقائيًا نسخ الرسائل/الملفات المخزَّنة محليًا على جهازك؛ لإزالتها احذف بيانات التطبيق أو أزل تثبيته.',
+      deleteLink: 'اذهب إلى صفحة حذف الحساب',
+      childrenTitle: 'الأطفال',
+      childrenBody: 'مراسيل غير موجّه للأطفال دون السن القانوني المطلوب لإنشاء حساب Google في بلدك، ولا نجمع عن قصد بيانات من أطفال دون ذلك السن.',
+      changesTitle: 'تعديلات على هذه السياسة',
+      changesBody: 'قد نُحدّث هذه السياسة من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري.',
+      contactTitle: 'تواصل معنا',
+      contactBody: 'لأي استفسار متعلق بالخصوصية أو بياناتك: ',
+    },
+    en: {
+      title: 'Maraseel Privacy Policy',
+      versionLabel: 'Policy version:',
+      intro: 'Maraseel is a messaging app for text, photo, file and voice messages, voice/video calls, statuses (stories), and live audio broadcasting, with both direct nearby-device connectivity (Wi-Fi Direct) and internet transport. This page explains what data we process and how.',
+      collectTitle: 'Data we process',
+      colData: 'Data', colWhere: 'Where it is stored',
+      tableNote: '"Server" means the app\'s Supabase project (database + file storage protected by Row Level Security). "Device only" means data that never leaves your device.',
+      useTitle: 'How we use this data',
+      useBody: 'We use this data solely to provide the app\'s own features: authentication, delivering messages and media, running calls and audio broadcasts, enabling nearby-device connectivity, and keeping your account secure. Maraseel does not use your data for advertising or tracking, and contains no analytics or ads SDK.',
+      thirdPartyTitle: 'Third parties',
+      tpGoogle: 'Google — used only for Google account sign-in (we request no scopes beyond name, email and avatar).',
+      tpSupabase: 'Supabase — the database, storage and Edge Function backend that powers the app.',
+      tpNote: 'Your data with these providers is also subject to their own privacy policies.',
+      securityTitle: 'Security',
+      securityBody: 'Private media is stored in protected Supabase Storage buckets and served only via signed URLs to authorized users. The database is protected by Row Level Security policies that prevent any user from reading another user\'s data.',
+      retentionTitle: 'Data retention and deletion',
+      retentionBody: 'You can permanently delete your account and data from within the app (Settings → Delete account) or from the official account-deletion page, available even without the app installed. Deletion removes your authentication account, messages, statuses and profile from our servers. Locally cached copies of messages/files on your device are not deleted automatically — clear the app\'s storage or uninstall it to remove those.',
+      deleteLink: 'Go to the account deletion page',
+      childrenTitle: 'Children',
+      childrenBody: 'Maraseel is not directed at children under the minimum age required to hold a Google account in your country, and we do not knowingly collect data from children under that age.',
+      changesTitle: 'Changes to this policy',
+      changesBody: 'We may update this policy from time to time. The version number and date above will change whenever a material update is made.',
+      contactTitle: 'Contact us',
+      contactBody: 'For any privacy question about your data: ',
+    },
+  };
+
+  let currentLang = 'ar';
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('btn-lang-ar').setAttribute('aria-pressed', String(lang === 'ar'));
+    document.getElementById('btn-lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+    });
+    renderTable(lang);
+  }
+  setLang('ar');
+</script>
+</body>
+</html>
