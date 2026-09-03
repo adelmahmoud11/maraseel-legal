@@ -5,61 +5,91 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>سياسة الخصوصية — مراسيل / Maraseel Privacy Policy</title>
 <style>
-  :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#666; --border:#ddd; --accent:#1565c0; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#121212; --fg:#f0f0f0; --muted:#aaa; --border:#333; --accent:#64b5f6; } }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:'Segoe UI',Tahoma,Arial,sans-serif; line-height:1.8; }
-  main { max-width:760px; margin:0 auto; padding:32px 20px 80px; }
-  h1 { font-size:1.5rem; margin-bottom:4px; } h2 { font-size:1.15rem; margin-top:32px; }
-  .meta { color:var(--muted); font-size:.9rem; }
-  .lang-toggle { display:flex; justify-content:flex-end; gap:8px; margin-bottom:16px; }
-  .lang-toggle button { background:none; border:1px solid var(--border); color:var(--fg); padding:4px 12px; border-radius:6px; cursor:pointer; font-size:.85rem; }
-  .lang-toggle button[aria-pressed="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
-  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:.92rem; }
-  th,td { text-align:start; padding:8px 10px; border-bottom:1px solid var(--border); } th { color:var(--muted); font-weight:600; } a { color:var(--accent); }
+:root{color-scheme:light dark;--bg:#fff;--fg:#17211f;--muted:#65716e;--card:#f5f9f8;--border:#dce6e3;--accent:#007f7a}@media(prefers-color-scheme:dark){:root{--bg:#0c1413;--fg:#eef8f5;--muted:#a8b7b3;--card:#14201e;--border:#263633;--accent:#55d8ca}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.75}main{max-width:820px;margin:auto;padding:28px 18px 72px}h1{font-size:1.55rem;margin:.2rem 0}h2{font-size:1.12rem;margin-top:1.7rem}p,li{font-size:.96rem}.meta{color:var(--muted);font-size:.88rem}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:12px 0}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:9px;border-bottom:1px solid var(--border);text-align:start;vertical-align:top}th{color:var(--muted)}a{color:var(--accent)}.toggle{display:flex;justify-content:flex-end;gap:8px}.toggle button{border:1px solid var(--border);background:var(--card);color:var(--fg);border-radius:7px;padding:6px 12px;cursor:pointer}.toggle button.active{background:var(--accent);color:#fff}.en{direction:ltr;text-align:left}.ar{direction:rtl;text-align:right}
 </style>
 </head>
-<body>
-<main>
-  <div class="lang-toggle"><button id="btn-lang-ar" aria-pressed="true" onclick="setLang('ar')">العربية</button><button id="btn-lang-en" aria-pressed="false" onclick="setLang('en')">English</button></div>
-  <h1 data-i18n="title">سياسة الخصوصية — مراسيل</h1>
-  <p class="meta"><span data-i18n="versionLabel">إصدار السياسة:</span> 1.2.0 (2026-09-02)</p>
-  <p data-i18n="intro">مراسيل تطبيق مراسلة يتيح إرسال الرسائل النصية والصور والملفات والرسائل الصوتية، مكالمات صوتية وفيديو، حالات (قصص)، وبثًا صوتيًا مباشرًا، مع دعم اتصال مباشر بين الأجهزة القريبة (Wi-Fi Direct) بالإضافة إلى النقل عبر الإنترنت. توضح هذه الصفحة ما الذي نعالجه من بياناتك وكيف.</p>
-  <h2 data-i18n="collectTitle">البيانات التي نعالجها</h2>
-  <table><thead><tr><th data-i18n="colData">البيانات</th><th data-i18n="colWhere">أين تُخزَّن</th></tr></thead><tbody id="data-table-body"></tbody></table>
-  <p class="meta" data-i18n="tableNote">"الخادم" يشمل خدمات مراسيل الخلفية المستخدمة لتشغيل الميزات: Supabase للهوية وقاعدة البيانات والتخزين الخاص والدوال الخلفية، وCloudflare R2 لوسائط المحادثات، وFirebase Cloud Messaging لتسليم الإشعارات. "الجهاز فقط" تعني بيانات تبقى محليًا ما لم يختر المستخدم مشاركتها.</p>
-  <h2 data-i18n="useTitle">كيف نستخدم هذه البيانات</h2>
-  <p data-i18n="useBody">نستخدم هذه البيانات فقط لتقديم ميزات التطبيق نفسه: تسجيل الدخول والتحقق من الهوية، تسليم الرسائل والوسائط، تشغيل المكالمات والبث الصوتي، تفعيل ميزة الاتصال بالأجهزة القريبة، والحفاظ على أمان حسابك. لا يستخدم مراسيل بياناتك للإعلانات أو التتبع، ولا يحتوي على أي حزمة تحليلات (Analytics) أو إعلانات (Ads SDK).</p>
-  <h2 data-i18n="thirdPartyTitle">أطراف ثالثة</h2>
-  <ul><li data-i18n="tpGoogle">Google — لتسجيل الدخول عبر حساب Google فقط (لا نطلب صلاحيات إضافية غير الاسم والبريد والصورة الرمزية).</li><li data-i18n="tpSupabase">Supabase — مزوّد المصادقة وقاعدة البيانات والتخزين الخاص والدوال الخلفية (Edge Functions) التي تشغّل التطبيق.</li><li data-i18n="tpCloudflare">Cloudflare R2 — تخزين خاص لمرفقات المحادثات مثل الصور والفيديو والملفات والرسائل الصوتية؛ الوصول يتم بروابط موقّعة محدودة المدة.</li><li data-i18n="tpFirebase">Firebase Cloud Messaging — لتسليم إشعارات الرسائل والمكالمات إلى أجهزتك.</li></ul>
-  <p data-i18n="tpNote">تخضع بياناتك لدى هذه الأطراف أيضًا لسياسات الخصوصية الخاصة بها.</p>
-  <h2 data-i18n="securityTitle">الأمان</h2><p data-i18n="securityBody">تُخزَّن وسائط المحادثات الخاصة في Cloudflare R2 الخاص، بينما تُخزَّن الحالات وخلفيات المحادثة وبيانات أخرى في حاويات Supabase Storage خاصة بحسب الميزة. الوصول إلى الوسائط الخاصة يتطلب مصادقة وصلاحية، وتُستخدم روابط موقّعة محدودة المدة عند الحاجة. قاعدة البيانات محمية بسياسات أمان على مستوى الصف (RLS) وبصلاحيات خادم للتحقق من ملكية البيانات.</p>
-  <h2 data-i18n="retentionTitle">الاحتفاظ بالبيانات وحذفها</h2><p data-i18n="retentionBody">يمكنك حذف حسابك وبياناتك بشكل دائم من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية المتاحة حتى دون تثبيت التطبيق. لا يُعتبر الحذف ناجحًا إلا بعد تنظيف بيانات الحساب المرتبطة به من قاعدة البيانات والتخزين الخاص في Supabase ووسائط المستخدم في Cloudflare R2 ثم حذف حساب المصادقة. لا تُحذف تلقائيًا نسخ الرسائل/الملفات المخزَّنة محليًا على جهازك؛ لإزالتها احذف بيانات التطبيق أو أزل تثبيته.</p><p><a href="./delete-account.html" data-i18n="deleteLink">اذهب إلى صفحة حذف الحساب</a></p>
-  <h2 data-i18n="childrenTitle">الأطفال</h2><p data-i18n="childrenBody">مراسيل غير موجّه للأطفال دون السن القانوني المطلوب لإنشاء حساب Google في بلدك، ولا نجمع عن قصد بيانات من أطفال دون ذلك السن.</p>
-  <h2 data-i18n="changesTitle">تعديلات على هذه السياسة</h2><p data-i18n="changesBody">قد نُحدّث هذه السياسة من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري.</p>
-  <h2 data-i18n="contactTitle">تواصل معنا</h2><p><span data-i18n="contactBody">لأي استفسار متعلق بالخصوصية أو بياناتك: </span><a href="mailto:adelsat2008@gmail.com">adelsat2008@gmail.com</a></p>
-</main>
-<script>
-const rows=[
-{ar:['معرّف الحساب وبريد وصورة Google','Supabase Auth وملف الحساب؛ البريد لا يُعرض كحقل عام للمستخدمين الآخرين'],en:['Account ID, Google email and avatar','Supabase Auth and account profile; email is not exposed as a public peer field']},
-{ar:['الاسم الظاهر ورقم الهاتف الاختياري ونبذة الملف الشخصي','Supabase؛ رقم الهاتف والبريد حقول خاصة بالحساب، ويُتاح البحث الدقيق بالهاتف فقط عند إدخال الرقم كاملًا'],en:['Display name, optional phone number and bio','Supabase; phone/email are private account fields, with exact phone lookup only when the full number is supplied']},
-{ar:['الرسائل النصية وبيانات تسليمها','Supabase + نسخة محلية على الجهاز لدعم العمل دون اتصال'],en:['Text messages and delivery metadata','Supabase + a local device copy for offline support']},
-{ar:['مرفقات المحادثات: الصور والفيديو والملفات والرسائل الصوتية','Cloudflare R2 خاص عبر روابط موقّعة مؤقتة؛ قد تبقى بعض الوسائط القديمة في Supabase Storage الخاص للتوافق'],en:['Chat attachments: images, videos, files and voice notes','Private Cloudflare R2 via temporary signed URLs; some legacy media may remain in private Supabase Storage for compatibility']},
-{ar:['صور خلفيات المحادثة التي تختار رفعها','Supabase Storage خاص داخل مجلد المستخدم، وليس رابطًا عامًا دائمًا'],en:['Chat wallpaper images you choose to upload','Private Supabase Storage in the user-owned folder, not a permanent public URL']},
-{ar:['الحالات (القصص) وجمهورها ومشاهداتها وتعليقاتها','Supabase + حاوية وسائط خاصة مع انتهاء صلاحية للحالة'],en:['Statuses (stories), audience, views and comments','Supabase + private media storage with status expiry enforcement']},
-{ar:['إشارات المكالمات الصوتية/الفيديو وسجل حالة المكالمة','Supabase؛ صوت/فيديو المكالمة ينتقل لحظيًا عبر WebRTC وقد يمر عبر خادم TURN عند الحاجة ولا يُخزَّن كملف مكالمة افتراضيًا'],en:['Voice/video call signaling and call-state history','Supabase; live call media travels via WebRTC and may relay through TURN when needed, and is not stored as a call recording by default']},
-{ar:['الموقع الدقيق عند اختيار مشاركة موقع أو موقع مباشر','يُقرأ من الجهاز عند الطلب فقط ثم تُرسل الإحداثيات ضمن الرسالة إلى Supabase وتُحفظ محليًا لعرض المحادثة'],en:['Precise location when you choose to share current/live location','Read from the device only on request, then coordinates are sent as message data to Supabase and cached locally for chat display']},
-{ar:['جهات الاتصال داخل مراسيل التي تضيفها يدويًا','جدول Supabase خاص بصاحب الحساب + نسخة محلية لاستعادتها واستخدامها في ميزات التطبيق'],en:['In-app Maraseel contacts you add manually','Owner-scoped Supabase table + local copy for recovery and app features']},
-{ar:['بيانات الأجهزة المرتبطة وطلبات الربط','Supabase؛ تتضمن معرّف الجهاز واسم/نوع الجهاز ومعلومات جلسة لازمة للإلغاء الآمن، مع أسرار ربط مؤقتة ومحدودة الصلاحية'],en:['Linked-device metadata and pairing requests','Supabase; device ID/label/platform and session data needed for secure revocation, with short-lived pairing secrets']},
-{ar:['رمز حماية المحادثات (PIN) إن فعّلته','الجهاز فقط، مخزَّن في secure storage'],en:['Chat-lock PIN, if enabled','Device only, stored in secure storage']},
-{ar:['رمز إشعارات الدفع (Push token)','Supabase ويُستخدم مع Firebase Cloud Messaging لتسليم الإشعارات فقط'],en:['Push notification token','Supabase and Firebase Cloud Messaging, used only to deliver notifications']},
-{ar:['بيانات الاتصال المباشر بالأجهزة القريبة (Wi-Fi Direct)','تُستخدم على الجهاز وفي الاتصال المباشر بين الأجهزة؛ لا تُستخدم للإعلانات أو التتبع'],en:['Nearby-device direct connection data (Wi-Fi Direct)','Used on-device and for direct peer connectivity; not used for ads or tracking']},
-{ar:['جهات اتصال الهاتف (دفتر العناوين)','لا يطلب التطبيق صلاحية READ_CONTACTS ولا يقرأ دفتر عناوين الهاتف'],en:['Phone address book','The app does not request READ_CONTACTS and does not read the phone address book']},
-{ar:['بيانات تحليلات أو إعلانات','لا توجد حزمة إعلانات أو Analytics في الإصدار الحالي'],en:['Analytics or advertising data','No ads or analytics SDK is included in the current build']}
-];
-const tbody=document.getElementById('data-table-body'); function renderTable(lang){tbody.innerHTML=rows.map(r=>`<tr><td>${r[lang][0]}</td><td>${r[lang][1]}</td></tr>`).join('');}
-const i18n={ar:{title:'سياسة الخصوصية — مراسيل',versionLabel:'إصدار السياسة:',intro:'مراسيل تطبيق مراسلة يتيح إرسال الرسائل النصية والصور والملفات والرسائل الصوتية، مكالمات صوتية وفيديو، حالات (قصص)، وبثًا صوتيًا مباشرًا، مع دعم اتصال مباشر بين الأجهزة القريبة (Wi-Fi Direct) بالإضافة إلى النقل عبر الإنترنت. توضح هذه الصفحة ما الذي نعالجه من بياناتك وكيف.',collectTitle:'البيانات التي نعالجها',colData:'البيانات',colWhere:'أين تُخزَّن',tableNote:'"الخادم" يشمل خدمات مراسيل الخلفية المستخدمة لتشغيل الميزات: Supabase للهوية وقاعدة البيانات والتخزين الخاص والدوال الخلفية، وCloudflare R2 لوسائط المحادثات، وFirebase Cloud Messaging لتسليم الإشعارات. "الجهاز فقط" تعني بيانات تبقى محليًا ما لم يختر المستخدم مشاركتها.',useTitle:'كيف نستخدم هذه البيانات',useBody:'نستخدم هذه البيانات فقط لتقديم ميزات التطبيق نفسه: تسجيل الدخول والتحقق من الهوية، تسليم الرسائل والوسائط، تشغيل المكالمات والبث الصوتي، تفعيل ميزة الاتصال بالأجهزة القريبة، والحفاظ على أمان حسابك. لا يستخدم مراسيل بياناتك للإعلانات أو التتبع، ولا يحتوي على أي حزمة تحليلات (Analytics) أو إعلانات (Ads SDK).',thirdPartyTitle:'أطراف ثالثة',tpGoogle:'Google — لتسجيل الدخول عبر حساب Google فقط (لا نطلب صلاحيات إضافية غير الاسم والبريد والصورة الرمزية).',tpSupabase:'Supabase — مزوّد المصادقة وقاعدة البيانات والتخزين الخاص والدوال الخلفية (Edge Functions) التي تشغّل التطبيق.',tpCloudflare:'Cloudflare R2 — تخزين خاص لمرفقات المحادثات، والوصول يتم عبر روابط موقّعة محدودة المدة.',tpFirebase:'Firebase Cloud Messaging — لتسليم إشعارات الرسائل والمكالمات إلى أجهزتك.',tpNote:'تخضع بياناتك لدى هذه الأطراف أيضًا لسياسات الخصوصية الخاصة بها.',securityTitle:'الأمان',securityBody:'تُخزَّن وسائط المحادثات الخاصة في Cloudflare R2 الخاص، بينما تُخزَّن الحالات وخلفيات المحادثة وبيانات أخرى في حاويات Supabase Storage خاصة بحسب الميزة. الوصول إلى الوسائط الخاصة يتطلب مصادقة وصلاحية، وتُستخدم روابط موقّعة محدودة المدة عند الحاجة. قاعدة البيانات محمية بسياسات أمان على مستوى الصف (RLS) وبصلاحيات خادم للتحقق من ملكية البيانات.',retentionTitle:'الاحتفاظ بالبيانات وحذفها',retentionBody:'يمكنك حذف حسابك وبياناتك بشكل دائم من داخل التطبيق (الإعدادات ← حذف الحساب) أو من صفحة حذف الحساب الرسمية المتاحة حتى دون تثبيت التطبيق. لا يُعتبر الحذف ناجحًا إلا بعد تنظيف بيانات الحساب المرتبطة به من قاعدة البيانات والتخزين الخاص في Supabase ووسائط المستخدم في Cloudflare R2 ثم حذف حساب المصادقة. لا تُحذف تلقائيًا نسخ الرسائل/الملفات المخزَّنة محليًا على جهازك؛ لإزالتها احذف بيانات التطبيق أو أزل تثبيته.',deleteLink:'اذهب إلى صفحة حذف الحساب',childrenTitle:'الأطفال',childrenBody:'مراسيل غير موجّه للأطفال دون السن القانوني المطلوب لإنشاء حساب Google في بلدك، ولا نجمع عن قصد بيانات من أطفال دون ذلك السن.',changesTitle:'تعديلات على هذه السياسة',changesBody:'قد نُحدّث هذه السياسة من وقت لآخر. سيظهر رقم الإصدار وتاريخه أعلى هذه الصفحة عند أي تعديل جوهري.',contactTitle:'تواصل معنا',contactBody:'لأي استفسار متعلق بالخصوصية أو بياناتك: '},en:{title:'Maraseel Privacy Policy',versionLabel:'Policy version:',intro:'Maraseel is a messaging app for text, photo, file and voice messages, voice/video calls, statuses (stories), and live audio broadcasts, with both direct nearby-device connectivity (Wi-Fi Direct) and internet transport. This page explains what data we process and how.',collectTitle:'Data we process',colData:'Data',colWhere:'Where it is stored',tableNote:'"Server" includes the backend services used by Maraseel: Supabase for authentication, database, private storage and Edge Functions; Cloudflare R2 for chat media; and Firebase Cloud Messaging for notification delivery. "Device only" means data that remains local unless you choose to share it.',useTitle:'How we use this data',useBody:'We use this data solely to provide the app\'s own features: authentication, delivering messages and media, running calls and live audio broadcasts, enabling nearby-device connectivity, and keeping your account secure. Maraseel does not use your data for advertising or tracking, and contains no analytics or ads SDK.',thirdPartyTitle:'Third parties',tpGoogle:'Google — used only for Google account sign-in (we request no scopes beyond name, email and avatar).',tpSupabase:'Supabase — authentication, database, private storage and Edge Function backend.',tpCloudflare:'Cloudflare R2 — private storage for chat attachments, accessed with short-lived signed URLs.',tpFirebase:'Firebase Cloud Messaging — used to deliver message and call notifications to your devices.',tpNote:'Your data with these providers is also subject to their own privacy policies.',securityTitle:'Security',securityBody:'Private chat media is stored in private Cloudflare R2, while statuses and chat wallpapers use private Supabase Storage as appropriate. Private media access requires authentication and authorization, with short-lived signed URLs where needed. Database access is protected by RLS and server-side authorization.',retentionTitle:'Data retention and deletion',retentionBody:'You can permanently delete your account and data from within the app (Settings → Delete account) or from the official account-deletion page. Deletion is reported successful only after associated database data, Supabase Storage objects and Cloudflare R2 media are cleaned up and the authentication account is removed. Local device copies are removed by clearing app data or uninstalling the app.',deleteLink:'Go to the account deletion page',childrenTitle:'Children',childrenBody:'Maraseel is not directed at children under the minimum age required to hold a Google account in your country, and we do not knowingly collect data from children under that age.',changesTitle:'Changes to this policy',changesBody:'We may update this policy from time to time. The version number and date above will change whenever a material update is made.',contactTitle:'Contact us',contactBody:'For any privacy question about your data: '}};
-function setLang(lang){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.getElementById('btn-lang-ar').setAttribute('aria-pressed',String(lang==='ar'));document.getElementById('btn-lang-en').setAttribute('aria-pressed',String(lang==='en'));document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(i18n[lang][key]!==undefined)el.innerHTML=i18n[lang][key];});renderTable(lang);} setLang('ar');
-</script>
-</body>
-</html>
+<body><main>
+<div class="toggle"><button id="arBtn" class="active" onclick="showLang('ar')">العربية</button><button id="enBtn" onclick="showLang('en')">English</button></div>
+
+<section id="ar" class="ar">
+<h1>سياسة الخصوصية — مراسيل</h1>
+<p class="meta">إصدار السياسة: 1.3.0 — 3 سبتمبر 2026</p>
+<p>توضح هذه السياسة كيف يعالج تطبيق <strong>مراسيل (Maraseel)</strong> بياناتك عند استخدام الرسائل والمكالمات والحالات والبث الصوتي والاتصال القريب عبر Wi‑Fi Direct. للتواصل بشأن الخصوصية: <a href="mailto:adelsat2008@gmail.com">adelsat2008@gmail.com</a>.</p>
+
+<h2>البيانات التي نعالجها</h2>
+<div class="card"><table><thead><tr><th>البيانات</th><th>الاستخدام/مكان المعالجة</th></tr></thead><tbody>
+<tr><td>معرّف حساب Google والبريد والاسم والصورة</td><td>تسجيل الدخول وإدارة الحساب عبر Google وSupabase Auth/الملف الشخصي.</td></tr>
+<tr><td>الاسم الظاهر ورقم الهاتف الاختياري والنبذة</td><td>ميزات الملف الشخصي والبحث الدقيق بجهات مراسيل عند استخدامه.</td></tr>
+<tr><td>الرسائل وبيانات التسليم والقراءة</td><td>Supabase وقاعدة محلية على الجهاز لدعم المحادثة والعمل دون اتصال.</td></tr>
+<tr><td>صور وفيديو وملفات ورسائل صوتية</td><td>وسائط المحادثة الخاصة تُرفع مباشرة إلى Cloudflare R2 عبر روابط موقعة محدودة المدة؛ وقد تبقى وسائط قديمة في تخزين Supabase الخاص للتوافق.</td></tr>
+<tr><td>الحالات والجمهور والمشاهدات والتعليقات</td><td>Supabase وتخزين خاص للوسائط وفق مدة الحالة.</td></tr>
+<tr><td>الموقع الدقيق</td><td>يُقرأ ويرسل فقط عندما تختار مشاركة موقعك الحالي أو الموقع المباشر داخل رسالة.</td></tr>
+<tr><td>جهات اتصال مراسيل التي تضيفها</td><td>Supabase ونسخة محلية. التطبيق لا يطلب صلاحية قراءة دفتر هاتف Android بالكامل (READ_CONTACTS).</td></tr>
+<tr><td>إشارات المكالمات وحالة الاتصال</td><td>Supabase. صوت وفيديو المكالمة ينتقلان عبر WebRTC وقد يمران عبر TURN عند الحاجة، ولا يُخزنان كتسجيل مكالمة افتراضيًا.</td></tr>
+<tr><td>جلسات وإشارات البث الصوتي</td><td>Supabase/WebRTC لتشغيل البث. التسجيل الذي تبدأه أنت يُحفظ على جهازك ويمكنك تصديره أو مشاركته.</td></tr>
+<tr><td>رمز Push ومعلومات الجهاز/الأجهزة المرتبطة</td><td>Supabase وFirebase Cloud Messaging للإشعارات والأمان وربط الأجهزة وإلغاء الجلسات.</td></tr>
+<tr><td>بيانات Wi‑Fi Direct والأجهزة القريبة</td><td>تُستخدم على الجهاز وللاتصال المباشر بين الأجهزة لتنفيذ ميزة الاتصال القريب، وليست للإعلانات أو التتبع.</td></tr>
+</tbody></table></div>
+
+<h2>الصلاحيات الحساسة</h2>
+<ul><li><strong>الكاميرا:</strong> لالتقاط الصور/الفيديو، مسح QR، ومكالمات الفيديو عند استخدام هذه الميزات.</li><li><strong>الميكروفون:</strong> للرسائل الصوتية والمكالمات والبث الصوتي عندما تبدأ أو تستخدم الميزة.</li><li><strong>الموقع/الأجهزة القريبة:</strong> لمشاركة الموقع التي تختارها ولمتطلبات اكتشاف Wi‑Fi Direct على إصدارات Android المختلفة.</li><li><strong>الإشعارات:</strong> لتنبيهات الرسائل والمكالمات.</li></ul>
+
+<h2>كيف نستخدم البيانات</h2>
+<p>نستخدم البيانات فقط لتقديم وظائف مراسيل، المصادقة، تسليم الرسائل والوسائط، الاتصال والبث، الإشعارات، مزامنة الأجهزة، الأمان والدعم. <strong>لا يحتوي الإصدار الحالي على إعلانات أو SDK تحليلات/تتبع.</strong></p>
+
+<h2>مقدمو الخدمات</h2>
+<ul><li><strong>Google:</strong> تسجيل الدخول بحساب Google.</li><li><strong>Supabase:</strong> المصادقة وقاعدة البيانات وRealtime والتخزين الخاص والدوال الخلفية.</li><li><strong>Cloudflare R2:</strong> تخزين وسائط المحادثات الخاصة.</li><li><strong>Firebase Cloud Messaging:</strong> تسليم إشعارات الرسائل والمكالمات.</li><li><strong>TURN:</strong> ترحيل وسائط WebRTC عند تعذر الاتصال المباشر.</li></ul>
+
+<h2>الأمان</h2>
+<p>تستخدم حركة السحابة HTTPS/WSS/TLS، ويستخدم WebRTC نقله المشفر القياسي. تُحمى بيانات Supabase بسياسات RLS وصلاحيات خادم، وتستخدم وسائط R2 روابط وصول موقعة قصيرة العمر. لا نضع مفاتيح R2 أو مفاتيح خدمة Supabase السرية داخل التطبيق.</p>
+
+<h2>الاحتفاظ والحذف</h2>
+<p>وسائط R2 لها سياسة انتهاء خادم: الفيديو عادةً 10 أيام، وباقي وسائط المحادثة في R2 عادةً 30 يومًا، ما لم يلزم الاحتفاظ وفق حالة خادم موثقة. الحالات لها مدة صلاحية منفصلة. يمكنك حذف حسابك من داخل التطبيق: <strong>الإعدادات ← حذف الحساب</strong> أو من <a href="./delete-account.html">صفحة حذف الحساب الرسمية</a>. لا يكتمل طلب الحذف إلا بعد معالجة بيانات الحساب والتخزين الخاص ووسائط R2 ثم حذف حساب المصادقة. النسخ المحلية الموجودة على جهازك تزال بحذف بيانات التطبيق أو إزالة التطبيق.</p>
+
+<h2>الأطفال والتغييرات</h2>
+<p>مراسيل غير موجه للأطفال دون السن القانوني المطلوب لامتلاك حساب Google في بلدهم. قد نحدث هذه السياسة عند تغير التطبيق أو مزودي الخدمة، وسيظهر رقم الإصدار والتاريخ هنا.</p>
+<p><a href="./delete-account.html">حذف الحساب</a> · <a href="./terms-of-service.html">شروط الخدمة</a></p>
+</section>
+
+<section id="en" class="en" hidden>
+<h1>Maraseel Privacy Policy</h1>
+<p class="meta">Policy version: 1.3.0 — September 3, 2026</p>
+<p>This policy explains how <strong>Maraseel</strong> processes data when you use messaging, calls, statuses, live audio broadcasting, and nearby Wi‑Fi Direct features. Privacy contact: <a href="mailto:adelsat2008@gmail.com">adelsat2008@gmail.com</a>.</p>
+
+<h2>Data we process</h2>
+<div class="card"><table><thead><tr><th>Data</th><th>Use / processing location</th></tr></thead><tbody>
+<tr><td>Google account ID, email, name and avatar</td><td>Sign-in and account management through Google and Supabase Auth/profile services.</td></tr>
+<tr><td>Display name, optional phone number and bio</td><td>Profile features and exact Maraseel contact lookup when used.</td></tr>
+<tr><td>Messages and delivery/read metadata</td><td>Supabase plus a local device database for chat and offline support.</td></tr>
+<tr><td>Photos, videos, files and voice notes</td><td>Private chat media is uploaded directly to Cloudflare R2 using short-lived signed URLs; legacy private Supabase Storage media may remain for compatibility.</td></tr>
+<tr><td>Statuses, audience, views and comments</td><td>Supabase and private media storage subject to status expiry.</td></tr>
+<tr><td>Precise location</td><td>Read and transmitted only when you choose to share current or live location in a message.</td></tr>
+<tr><td>Maraseel contacts you add</td><td>Supabase and a local copy. The app does not request full Android address-book access (READ_CONTACTS).</td></tr>
+<tr><td>Call signaling and call state</td><td>Supabase. Live call audio/video travels through WebRTC and may relay through TURN; calls are not recorded by default.</td></tr>
+<tr><td>Live-audio session/signaling data</td><td>Supabase/WebRTC to operate broadcasts. A recording you start is stored on your device and can be exported/shared by you.</td></tr>
+<tr><td>Push token and device/linked-device metadata</td><td>Supabase and Firebase Cloud Messaging for notifications, security, device linking and revocation.</td></tr>
+<tr><td>Wi‑Fi Direct / nearby-device data</td><td>Used on-device and peer-to-peer for nearby connectivity, not for advertising or tracking.</td></tr>
+</tbody></table></div>
+
+<h2>Sensitive permissions</h2>
+<ul><li><strong>Camera:</strong> photos/videos, QR scanning and video calls when you use those features.</li><li><strong>Microphone:</strong> voice messages, calls and live audio when you start/use those features.</li><li><strong>Location / nearby devices:</strong> user-requested location sharing and Wi‑Fi Direct discovery requirements on different Android versions.</li><li><strong>Notifications:</strong> message and incoming-call alerts.</li></ul>
+
+<h2>How we use data</h2>
+<p>Data is used only for Maraseel functionality, authentication, message/media delivery, calls and broadcasts, notifications, device synchronization, security and support. <strong>The current release contains no ads or analytics/tracking SDK.</strong></p>
+
+<h2>Service providers</h2>
+<ul><li><strong>Google:</strong> Google account sign-in.</li><li><strong>Supabase:</strong> authentication, database, Realtime, private storage and backend functions.</li><li><strong>Cloudflare R2:</strong> private chat-media storage.</li><li><strong>Firebase Cloud Messaging:</strong> message and call notification delivery.</li><li><strong>TURN:</strong> relays encrypted WebRTC media when a direct connection cannot be established.</li></ul>
+
+<h2>Security</h2>
+<p>Cloud traffic uses HTTPS/WSS/TLS and WebRTC uses its standard encrypted media transport. Supabase data is protected with RLS/server authorization and R2 media uses short-lived signed access URLs. R2 secrets and Supabase service credentials are not embedded in the app.</p>
+
+<h2>Retention and deletion</h2>
+<p>R2 media has server-enforced expiry: video is normally retained for 10 days and other R2 chat media for 30 days unless a documented server retention state applies. Statuses have separate expiry. You can delete your account in the app at <strong>Settings → Delete account</strong> or through the <a href="./delete-account.html">official account deletion page</a>. Deletion is not reported complete until account data, private storage/R2 media and the authentication account have been processed. Local copies on your device are removed by clearing app storage or uninstalling the app.</p>
+
+<h2>Children and policy changes</h2>
+<p>Maraseel is not directed to children below the minimum age required to hold a Google account in their country. We may update this policy when the app or its service providers change; the version and date above will be updated.</p>
+<p><a href="./delete-account.html">Delete account</a> · <a href="./terms-of-service.html">Terms of Service</a></p>
+</section>
+
+<script>function showLang(lang){const ar=lang==='ar';document.getElementById('ar').hidden=!ar;document.getElementById('en').hidden=ar;document.getElementById('arBtn').classList.toggle('active',ar);document.getElementById('enBtn').classList.toggle('active',!ar);document.documentElement.lang=lang;document.documentElement.dir=ar?'rtl':'ltr'}</script>
+</main></body></html>
